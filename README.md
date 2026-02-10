@@ -23,11 +23,11 @@ Project made fully for learning purposes.
 
 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
 
-  <img src="screenshots/workout-planner-main-page.png" width="250"/>
+  <img src="screenshots/workout-planner-main-page.png" width="220"/>
 
-  <img src="screenshots/workout-planner-template-page.png" width="250"/>
+  <img src="screenshots/workout-planner-template-page.png" width="220"/>
 
-  <img src="screenshots/workout-planner-exercises-page.png" width="250"/>
+  <img src="screenshots/workout-planner-exercises-page.png" width="220"/>
 
 </div>
 
@@ -37,7 +37,7 @@ Project made fully for learning purposes.
 ## Getting Started
 
 ```bash
-git clone https://github.com/yourusername/workout-planner.git
-cd workout-planner
+git clone https://github.com/masi23/Workout-Planner.git
+cd Workout-Planner
 npm install
 npm run dev
