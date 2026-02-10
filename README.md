@@ -21,14 +21,16 @@ Project made fully for learning purposes.
 
 ## Screenshots
 
-### Main Dashboard
-<img src="screenshots/workout-planner-main-page.png" width="600">
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
 
-### Template Page
-<img src="screenshots/workout-planner-template-page.png" width="600">
+  <img src="screenshots/workout-planner-main-page.png" width="250"/>
 
-### Exercises List
-<img src="screenshots/workout-planner-exercises-page.png" width="600">
+  <img src="screenshots/workout-planner-template-page.png" width="250"/>
+
+  <img src="screenshots/workout-planner-exercises-page.png" width="250"/>
+
+</div>
+
 
 ---
 
