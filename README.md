@@ -13,7 +13,7 @@ Project made fully for learning purposes.
 - Responsive design for desktop and mobile
 - Searchable list of popular exercises
 
-##Used in this project
+## Used in this project
 - React hooks: state, effect, context, navigate, memo
 - CSS layouts: flexbox, grid
 - External libraries: jsPDF, jsPDFAutoTable
