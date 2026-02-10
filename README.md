@@ -22,13 +22,13 @@ Project made fully for learning purposes.
 ## Screenshots
 
 ### Main Dashboard
-![Main Page](screenshots/workout-planner-main-page.png)
+<img src="screenshots/workout-planner-main-page.png" width="600">
 
 ### Template Page
-![Template Page](screenshots/workout-planner-template-page.png)
+<img src="screenshots/workout-planner-template-page.png" width="600">
 
 ### Exercises List
-![Exercises Page](screenshots/workout-planner-exercises-page.png)
+<img src="screenshots/workout-planner-exercises-page.png" width="600">
 
 ---
 
