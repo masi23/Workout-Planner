@@ -1,6 +1,6 @@
 import SetFieldInput from "./SetFieldInput";
 
-const SetRow = ({ set, setIndex, exerciseIndex, updateSet }) => {
+const SetRow = ({ set, setIndex, exerciseIndex, updateSet, handleDelete }) => {
   return (
     <div className="set-row">
       <p>{setIndex + 1}.</p>
@@ -18,6 +18,12 @@ const SetRow = ({ set, setIndex, exerciseIndex, updateSet }) => {
         setIndex={setIndex}
         updateSet={updateSet}
       />
+      <button
+        className="delete"
+        onClick={() => handleDelete(exerciseIndex, setIndex)}
+      >
+        ❌
+      </button>
     </div>
   );
 };

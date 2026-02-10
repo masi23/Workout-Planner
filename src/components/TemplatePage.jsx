@@ -9,6 +9,10 @@ const TemplatePage = () => {
   const { templates, setTemplates, currentTemplateIdx } =
     useContext(WorkoutContext);
 
+  const [templateCopy, setTemplateCopy] = useState(null);
+  useEffect(() => {
+    setTemplateCopy(templates[currentTemplateIdx]);
+  }, [currentTemplateIdx, templates]);
   const navigate = useNavigate();
 
   const saveTemplate = () => {
@@ -27,11 +31,6 @@ const TemplatePage = () => {
     saveTemplate();
     navigate("/exercises");
   };
-
-  const [templateCopy, setTemplateCopy] = useState(null);
-  useEffect(() => {
-    setTemplateCopy(templates[currentTemplateIdx]);
-  }, [currentTemplateIdx, templates]);
 
   const updateSet = (exerciseIndex, setIndex, field, value) => {
     const updatedExercises = [...templateCopy.exercises];
@@ -54,9 +53,17 @@ const TemplatePage = () => {
     const updatedTemplate = { ...templateCopy };
     const sets = updatedTemplate.exercises[exerciseIndex].sets;
     sets.push({
+      // id: sets.length - 1,
+      id: Date.now(),
       reps: sets[sets.length - 1].reps,
       weight: sets[sets.length - 1].weight,
     });
+    setTemplateCopy(updatedTemplate);
+  };
+
+  const deleteSet = (exerciseIndex, setIndex) => {
+    const updatedTemplate = structuredClone(templateCopy);
+    updatedTemplate.exercises[exerciseIndex].sets.splice(setIndex, 1);
     setTemplateCopy(updatedTemplate);
   };
 
@@ -84,13 +91,13 @@ const TemplatePage = () => {
         />
       </div>
       {templateCopy.exercises.map((exercise, exerciseIndex) => (
-        <div key={exerciseIndex} className="exercise-wrapper">
+        <div key={exercise.id} className="exercise-wrapper">
           <div className="exercise-header">
             <p>
               <strong>{exercise.name}</strong>
             </p>
             <button
-              className="delete-exercise-button"
+              className="delete"
               onClick={() => deleteExercise(exerciseIndex)}
             >
               ❌
@@ -104,10 +111,11 @@ const TemplatePage = () => {
           {exercise.sets.map((set, setIndex) => (
             <SetRow
               exerciseIndex={exerciseIndex}
-              key={setIndex}
+              key={set.id}
               set={set}
               setIndex={setIndex}
               updateSet={updateSet}
+              handleDelete={deleteSet}
             />
           ))}
           <button onClick={() => addSet(exerciseIndex)}>Add set</button>

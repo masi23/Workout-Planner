@@ -10,14 +10,12 @@ const ExerciseListItem = ({ exercise }) => {
     useContext(WorkoutContext);
   const handleClick = (e) => {
     if (e.target.className !== "help-tooltip-btn") {
-      console.log("exercise clicked: ", exercise.name);
       const updatedTemplates = templates;
       updatedTemplates[currentTemplateIdx].exercises.push({
         id: updatedTemplates[currentTemplateIdx].exercises.length,
         name: exercise.name,
-        sets: [{ reps: 0, weight: 0 }],
+        sets: [{ id: Date.now(), reps: 0, weight: 0 }],
       });
-      console.log("updated.", updatedTemplates);
 
       setTemplates(updatedTemplates);
       navigate("/template");
