@@ -1,16 +1,41 @@
-# React + Vite
+# Workout Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React application for creating, managing, and exporting workout templates. Planning exercises, sets, reps, and weights — all in browser, without a backend.
+Project made fully for learning purposes.
+---
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create and edit workout templates
+- Add exercises, sets, reps, and weight
+- Save templates to **Local Storage**
+- Export templates to **PDF** file with comfortable tables
+- Responsive design for desktop and mobile
+- Searchable list of popular exercises
 
-## React Compiler
+##Used in this project
+- React hooks: state, effect, context, navigate, memo
+- CSS layouts: flexbox, grid
+- External libraries: jsPDF, jsPDFAutoTable
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
 
-## Expanding the ESLint configuration
+### Main Dashboard
+![Main Page](screenshots/workout-planner-main-page.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Template Page
+![Template Page](screenshots/workout-planner-template-page.png)
+
+### Exercises List
+![Exercises Page](screenshots/workout-planner-exercises-page.png)
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/yourusername/workout-planner.git
+cd workout-planner
+npm install
+npm run dev
